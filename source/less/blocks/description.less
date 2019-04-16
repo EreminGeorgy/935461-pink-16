@@ -15,6 +15,10 @@
 
 .description__wrapper {
   background-color: @bg-lightgrey;
+  padding: 0 20px;
+  margin: 0 auto;
+  outline: 1px dashed blue;
+  min-width: 320px;
 }
 
 .description__fishing {
@@ -26,12 +30,8 @@
 }
 
 .description__list {
-  margin: 0 auto;
-  padding: 0;
-
-  list-style: none;
-
-  width: 280px;
+  .list-reset;
+  padding-left: 42px;
 }
 
 .description__item h3 {
@@ -42,4 +42,72 @@
 
 .description__item p {
   font-size: 14px;
+}
+
+.description__list-image {
+  display: none;
+}
+
+.description__effect {
+  background: url("../img/icon-timer.svg") top left no-repeat;
+  background-size: 238px;
+  padding-left: 300px;
+  height: 350px;
+  display: none;
+}
+
+.description__effect h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.description__effect a {
+  text-decoration: underline;
+  color: #d22856;
+}
+
+@media (min-width: @tablet-width) {
+  .description__list-wraper {
+    display:flex;
+  }
+
+  .description__image {
+    order: -1;
+    min-width: 230px;
+    max-width: 230px;
+    height: 483px;
+  }
+
+  .description__effect {
+    display:block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description__list {
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .description__list-image {
+    display:block;
+    margin: 0 auto;
+  }
+
+  .description__image {
+    display:none;
+  }
+
+  .description__list-wraper {
+    padding: 0 110px;
+  }
+
+  .description__item {
+    width: 250px;
+  }
+
+  .description__effect {
+    padding-right: 130px;
+  }
 }

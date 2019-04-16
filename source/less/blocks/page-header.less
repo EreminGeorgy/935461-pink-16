@@ -1,15 +1,27 @@
 .page-header {
-  background-color: #000000;
+  background-color: #283645;
   display: flex;
   flex-direction: column;
   color: #ffffff;
 
   outline: 2px solid lightblue;
-  width: 320px;
+
   margin: 0 auto;
 }
 
 .page-header__logo {
-  height: 22px;
+  height: 66px;
   outline: 2px solid blue;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+  height: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+  flex-direction: row;
+  }
 }
