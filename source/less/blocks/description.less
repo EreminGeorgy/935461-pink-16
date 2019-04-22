@@ -10,15 +10,18 @@
   padding-top: 45px;
   padding-bottom: 36px;
   background-color: #ffffff;
-  outline: 2px dashed red;
+  margin: 0 -20px;
 }
 
-.description__wrapper {
+.description__list-wraper {
+
+  position: relative;
   background-color: @bg-lightgrey;
   padding: 0 20px;
   margin: 0 auto;
-  outline: 1px dashed blue;
   min-width: 320px;
+  position: relative;
+  background: url("../img/bg-triangle-white.svg") top center no-repeat;
 }
 
 .description__fishing {
@@ -44,8 +47,16 @@
   font-size: 14px;
 }
 
-.description__list-image {
+.description__image {
+  .list-reset();
+}
+
+.description__image {
   display: none;
+}
+
+.description__image:last-child {
+  display: block;
 }
 
 .description__effect {
@@ -72,31 +83,34 @@
     display: flex;
   }
 
-  .description__image {
+  .description__images {
     order: -1;
-    min-width: 230px;
-    max-width: 230px;
-    height: 483px;
   }
 
   .description__effect {
     display: block;
   }
+
+  .description__image {
+    width: 300px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .description__list {
+
+  .description__list-wraper {
+    flex-direction: column;
+  }
+
+  .description__list,
+  .description__images {
     display: flex;
     justify-content: space-between;
   }
 
-  .description__list-image {
+  .description__image {
     display: block;
     margin: 0 auto;
-  }
-
-  .description__image {
-    display: none;
   }
 
   .description__list-wraper {
