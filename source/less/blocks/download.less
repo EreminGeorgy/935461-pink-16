@@ -3,25 +3,22 @@
   min-width: 320px;
   margin: 0 auto;
   position: relative;
-}
-
-.download__banner {
-  height: 463px;
   background:
-    url("../img/iphone-hand-mobile@1x.png") bottom left no-repeat,
+    url("../img/iphone-hand-mobile@1x.png") 0 176px no-repeat,
     url("../img/bg-back-mobile@1x.jpg") top center no-repeat;
   background-size: auto, 100%;
+  padding-top: 462px;
 }
 
-.download__wraper {
+.download__wrapper {
   padding-top: 28px;
   padding-bottom: 20px;
   color: #ffffff;
-  width: 280px;
   margin: 0 auto;
+  background-color: #1d2631;
 }
 
-.download__wraper h2 {
+.download__wrapper h2 {
   display: none;
 }
 
@@ -29,14 +26,14 @@
   font: inherit;
   font-size: 18px;
   font-weight: 700;
-  padding: 12px 43px;
+  padding: 12px 35px;
   margin: 0 auto;
 
   border-radius: 27px;
   border: 3px solid #ffffff;
   background: transparent;
   color: #ffffff;
-  margin-bottom: 38px;
+  margin-bottom: 32px;
   cursor: pointer;
 
   &:hover {
@@ -57,14 +54,19 @@
 
 .download__list {
   .list-reset;
-  padding: 0 38px;
+  width: 206px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+}
+
+.download p {
+  margin: 0 40px;
 }
 
 @media (min-width: @tablet-width) {
-  .download__wraper {
+  .download__wrapper {
     position: absolute;
     background-color: transparent;
     top: 155px;
@@ -73,15 +75,16 @@
     width: 300px;
   }
 
-  .download__banner {
+  .download {
     height: 729px;
     min-width: 660px;
+    padding-top: 0;
     background:
       url("../img/iphone-hand-tablet@1x.png") bottom center no-repeat,
       url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
   }
 
-  .download__wraper h2 {
+  .download__wrapper h2 {
     display: block;
     margin: 0;
     font-size: 40px;
@@ -96,10 +99,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .download__banner {
+  .download {
     height: 743px;
     min-width: 1200px;
-
     background:
       url("../img/iphone-hand-desktop@1x.png") center 110px no-repeat,
       url("../img/bg-back-desktop@1x.jpg") top center no-repeat;
