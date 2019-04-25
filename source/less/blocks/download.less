@@ -1,11 +1,49 @@
 .download {
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
   background:
-    #ffffff url("../img/iphone-hand-mobile@1x.png") top center no-repeat,
-    #ffffff url("../img/bg-back-mobile@1x.jpg") top center no-repeat;
+    url("../img/iphone-hand-mobile@1x.png") 0 176px no-repeat,
+    url("../img/bg-back-mobile@1x.jpg") top center no-repeat;
+  background-size: auto, 100%;
+  padding-top: 462px;
+}
 
-  background-color: #283645;
-  padding-bottom: 25px;
-  outline: 2px solid blue;
+.download__wrapper {
+  padding-top: 28px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  margin: 0 auto;
+  background-color: #1d2631;
+}
+
+.download__wrapper h2 {
+  display: none;
+}
+
+.download__button {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 35px;
+  margin: 0 auto;
+
+  border-radius: 27px;
+  border: 3px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  margin-bottom: 32px;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(210, 40, 86, 1);
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.33);
+    background-color: #ffffff;
+  }
 }
 
 .download__platforms {
@@ -14,8 +52,57 @@
 }
 
 .download__list {
-  margin: 0;
-  padding: 0;
+  .list-reset;
+  width: 206px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
-  list-style: none;
+.download p {
+  margin: 0 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .download__wrapper {
+    position: absolute;
+    background-color: transparent;
+    top: 155px;
+    left: 310px;
+    transform: translateX(-100%);
+    width: 300px;
+  }
+
+  .download {
+    height: 729px;
+    min-width: 660px;
+    padding-top: 0;
+    background:
+      url("../img/iphone-hand-tablet@1x.png") bottom center no-repeat,
+      url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
+  }
+
+  .download__wrapper h2 {
+    display: block;
+    margin: 0;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 200;
+    padding: 20px;
+  }
+
+  .download__button {
+    padding: 12px 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download {
+    height: 743px;
+    min-width: 1200px;
+    background:
+      url("../img/iphone-hand-desktop@1x.png") center 110px no-repeat,
+      url("../img/bg-back-desktop@1x.jpg") top center no-repeat;
+  }
 }

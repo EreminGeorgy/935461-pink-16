@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Приложение «Pink»">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Pink»">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a>Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a>Фотографии</a>
+            <a href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Конкурс</a>

@@ -21,10 +21,15 @@
 }
 
 .gallery__post {
-  width: 280px;
+  min-width: 280px;
   background-color: @bg-lightgrey;
   margin: 0 auto;
   text-align: left;
+}
+
+.gallery__panorama-comment {
+  margin: 0 20px;
+  max-width: 940px;
 }
 
 .gallery__post time,
@@ -36,22 +41,63 @@
 .gallery__likes {
   color: #d22856;
   margin: 0;
+  margin-left: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -35px;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 10;
+  }
 }
 
 .gallery__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 20px;
+  max-width: 940px;
+
+  outline: 1px solid black;
 }
 
 .gallery__item {
   padding: 0;
   margin: 0 auto;
   margin-bottom: 20px;
+  width: 280px;
 
   outline: 1px dashed red;
 }
 
 .gallery__item:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__item {
+    width: 300px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__panorama-comment {
+    margin: 0 auto;
+  }
+
+  .gallery__list {
+    margin: 0 auto;
+  }
 }

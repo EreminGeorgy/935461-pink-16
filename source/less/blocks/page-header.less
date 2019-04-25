@@ -1,15 +1,47 @@
 .page-header {
-  background-color: #000000;
+  position: relative;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   color: #ffffff;
-
-  outline: 2px solid lightblue;
-  width: 320px;
   margin: 0 auto;
+  margin-bottom: -68px;
+  z-index: 2;
 }
 
-.page-header__logo {
-  height: 22px;
-  outline: 2px solid blue;
+.page-header__logo svg {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 43px;
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 10;
+}
+
+.page-header__logo-glasses {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    margin-bottom: -109px;
+  }
+
+  .page-header__logo svg {
+    margin: 0 auto;
+    margin-top: 27px;
+  }
+
+  .page-header__logo-glasses {
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    margin-bottom: -110px;
+  }
 }
