@@ -14,14 +14,15 @@
   display: block;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 43px;
-  margin-top: 0;
-  margin-left: 0;
+  width: 154px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: -55px;
   z-index: 10;
 }
 
-.page-header__logo-glasses {
+.page-header__logo-glasses,
+.page-header__logo-desktop {
   display: none;
 }
 
@@ -33,6 +34,7 @@
   .page-header__logo svg {
     margin: 0 auto;
     margin-top: 27px;
+    margin-left: 15px;
   }
 
   .page-header__logo-glasses {
@@ -43,5 +45,17 @@
 @media (min-width: @desktop-width) {
   .page-header {
     margin-bottom: -110px;
+  }
+
+  .page-header__logo-image {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: inline-block;
+  }
+
+  .page-header__logo svg {
+    margin-left: 125px;
   }
 }

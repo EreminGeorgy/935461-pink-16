@@ -1,4 +1,5 @@
 .download {
+  font-family: inherit;
   min-width: 320px;
   margin: 0 auto;
   position: relative;
@@ -61,15 +62,16 @@
 }
 
 .download p {
-  margin: 0 40px;
+  margin: 15px 40px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: @tablet-width) {
   .download__wrapper {
     position: absolute;
     background-color: transparent;
-    top: 155px;
-    left: 310px;
+    top: 145px;
+    left: 320px;
     transform: translateX(-100%);
     width: 300px;
   }
@@ -81,19 +83,40 @@
     background:
       url("../img/iphone-hand-tablet@1x.png") bottom center no-repeat,
       url("../img/bg-back-tablet@1x.jpg") top center no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background:
+        url("../img/iphone-hand-tablet@2x.png") bottom center no-repeat,
+        url("../img/bg-back-tablet@2x.jpg") top center no-repeat;
+      background-size:
+        700px auto,
+        1200px auto;
+    }
   }
 
   .download__wrapper h2 {
     display: block;
     margin: 0;
     font-size: 40px;
-    line-height: 50px;
+    line-height: 48px;
     font-weight: 200;
-    padding: 20px;
+    padding: 30px;
   }
 
   .download__button {
-    padding: 12px 50px;
+    padding: 12px 45px;
+  }
+
+  .download__list {
+    margin-top: 12px;
+  }
+
+  .download p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 200;
+    margin: 30px 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -104,5 +127,14 @@
     background:
       url("../img/iphone-hand-desktop@1x.png") center 110px no-repeat,
       url("../img/bg-back-desktop@1x.jpg") top center no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background:
+        url("../img/iphone-hand-desktop@2x.png") bottom center no-repeat,
+        url("../img/bg-back-desktop@2x.jpg") top center no-repeat;
+      background-size:
+        1050px auto,
+        2560px auto;
+    }
   }
 }

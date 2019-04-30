@@ -7,10 +7,11 @@
 }
 
 .description__header {
-  padding-top: 45px;
+  padding-top: 42px;
   padding-bottom: 36px;
   background-color: #ffffff;
-  margin: 0 -20px;
+
+  margin: 0 auto;
 }
 
 .description__list-wrapper {
@@ -18,7 +19,7 @@
   position: relative;
   padding: 0 20px;
   margin: 0 auto;
-  min-width: 320px;
+  min-width: 280px;
   background: @bg-lightgrey url("../img/bg-triangle-white.svg") top center no-repeat;
 }
 
@@ -30,9 +31,12 @@
   font-weight: 300;
 }
 
+.description__br {
+  display: none;
+}
+
 .description__list {
   .list-reset;
-  padding-left: 42px;
 }
 
 .description__item h3 {
@@ -45,7 +49,7 @@
   font-size: 14px;
 }
 
-.description__image {
+.description__images {
   .list-reset();
   display: none;
 }
@@ -78,6 +82,18 @@
     display: flex;
   }
 
+  .description__fishing {
+    margin-top: 8px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+
+  .description__br {
+    display: inline-block;
+  }
+
   .description__images {
     order: -1;
   }
@@ -104,12 +120,13 @@
   }
 
   .description__image {
-    display: block;
-    margin: 0 auto;
+    display: block;;
+    margin: 0;
   }
 
   .description__item {
     width: 250px;
+    padding: 0 20px;
   }
 
   .description__effect {

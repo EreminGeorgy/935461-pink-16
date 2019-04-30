@@ -1,5 +1,4 @@
 .gallery {
-  outline: 1px solid yellow;
   margin: 0;
   padding: 0;
 }
@@ -7,29 +6,60 @@
 .gallery__title {
   margin: 0 auto;
   background-color: white;
-  height: 184px;
   font-size: 14px;
   line-height: 30px;
-  font-weight: 400;
-  padding: 0 20px;
+  font-weight: 300;
+  padding: 44px 20px;
+  padding-bottom: 48px;
 }
 
-.gallery__panorama {
-  outline: 1px dashed black;
+.gallery__photo {
+  display: block;
+  line-height: 0;
+}
+
+.gallery__panorama picture {
   margin: 0;
-  margin-bottom: 20px;
+  position: relative;
+
+  &::before {
+    content: "Панорама дня";
+
+    position: absolute;
+    top: -122px;
+    left: 160px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    width: 140px;
+
+    background-color: #d22856;
+    z-index: 10;
+  }
+}
+
+.gallery__article {
+  width: 280px;
+  height: 500px;
+  background-color: @bg-lightgrey;
 }
 
 .gallery__post {
-  min-width: 280px;
-  background-color: @bg-lightgrey;
   margin: 0 auto;
   text-align: left;
+  padding: 18px;
 }
 
 .gallery__panorama-comment {
   margin: 0 20px;
   max-width: 940px;
+  background-color: @bg-lightgrey;
 }
 
 .gallery__post time,
@@ -43,6 +73,7 @@
   margin: 0;
   margin-left: 40px;
   position: relative;
+  margin-top: auto;
 
   &::before {
     content: "";
@@ -68,36 +99,88 @@
   justify-content: space-between;
   margin: 0 20px;
   max-width: 940px;
-
-  outline: 1px solid black;
 }
 
 .gallery__item {
   padding: 0;
   margin: 0 auto;
   margin-bottom: 20px;
-  width: 280px;
-
-  outline: 1px dashed red;
 }
 
 .gallery__item:last-child {
   margin-bottom: 0;
 }
 
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  .gallery__photo-image--panorama {
+    object-fit: cover;
+    height: 510px;
+    width: 700px;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .gallery__item {
+  .gallery__br {
+    display: none;
+  }
+
+  .gallery__article {
     width: 300px;
     margin: 0;
+  }
+
+  .gallery__list {
+    margin: 0 20px;
+  }
+
+  .gallery__title {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 90px 58px;
+    padding-bottom: 77px;
+  }
+
+  .gallery__panorama picture::before {
+    top: -437px;
+    left: 500px;
+  }
+
+  .gallery__post {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__panorama-comment .gallery__likes {
+    order: -1;
+  }
+
+  .gallery__panorama-comment div {
+    order: -2;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .br {
+    display: none;
+  }
+
   .gallery__panorama-comment {
     margin: 0 auto;
   }
 
   .gallery__list {
     margin: 0 auto;
+  }
+
+  .gallery__title {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 92px 300px;
+    padding-bottom: 87px;
+  }
+
+  .gallery__panorama picture::before {
+    top: -435px;
+    left: 930px;
   }
 }
