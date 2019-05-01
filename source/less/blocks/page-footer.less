@@ -27,8 +27,27 @@
   display: flex;
   flex-wrap: wrap;
   min-width: 180px;
+  max-width: 340px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.social__item {
+  height: 25px;
+  width: 25px;
+  border: 5px solid red;
+  border-radius: 50%;
+}
+
+.social__item:not(:last-child),
+.social__item:not(:nth-child(5n)) {
+  margin-right: 5px;
+}
+
+.social__link svg {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 0;
 }
 
 @media (min-width: @tablet-width) {
