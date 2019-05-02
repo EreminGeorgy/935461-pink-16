@@ -2,33 +2,35 @@
   margin: 0;
   padding: 0;
   display: flex;
-
-  outline: 2px solid red;
 }
 
 .description__header {
-  padding-top: 42px;
-  padding-bottom: 36px;
+  padding-top: 40px;
   background-color: #ffffff;
-
   margin: 0 auto;
+  padding-bottom: 38px;
 }
 
 .description__list-wrapper {
-
   position: relative;
   padding: 0 20px;
   margin: 0 auto;
   min-width: 280px;
   background: @bg-lightgrey url("../img/bg-triangle-white.svg") top center no-repeat;
+  background-size: 100% auto;
 }
 
 .description__fishing {
   margin: 0;
   padding: 0;
-  color: #283645;
+  padding color: #283645;
   font-size: 24px;
+  line-height: 28px;
   font-weight: 300;
+}
+
+.description__fishing:last-child {
+  margin-top: 30px;
 }
 
 .description__br {
@@ -37,25 +39,35 @@
 
 .description__list {
   .list-reset;
+  padding-top: 78px;
+  margin-bottom: 40px;
 }
 
 .description__item h3 {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
 .description__item p {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 31px;
   font-size: 14px;
 }
 
 .description__images {
   .list-reset();
+}
+
+.description__image {
   display: none;
 }
 
 .description__image:last-child {
-  display: block;
+  display: inline-block;
 }
 
 .description__effect {
@@ -85,8 +97,12 @@
   .description__fishing {
     margin-top: 8px;
     font-size: 40px;
-    line-height: 44px;
+    line-height: 47px;
     font-weight: 300;
+  }
+
+  .description__fishing:last-child {
+    margin-top: 2px;
     padding-bottom: 10px;
   }
 
@@ -94,17 +110,35 @@
     display: inline-block;
   }
 
+  .description__list-wrapper {
+    padding: 0 5px;
+    padding-top: 5px;
+  }
+
+  .description__list {
+    text-align: left;
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 10px;
+  }
+
+  .description__item p {
+    margin-bottom: 34px;
+  }
+
   .description__images {
     order: -1;
+  }
+
+  .description__image {
+    width: 300px;
   }
 
   .description__effect {
     display: block;
   }
 
-  .description__image {
-    width: 300px;
-  }
+
 }
 
 @media (min-width: @desktop-width) {
@@ -113,10 +147,27 @@
     padding: 0 110px;
   }
 
+  .description__fishing {
+    margin-top: 28px;
+    font-size: 50px;
+    line-height: 59px;
+    font-weight: 300;
+  }
+
+  .description__fishing:last-child {
+    padding-bottom: 40px;
+  }
+
   .description__list,
   .description__images {
     display: flex;
     justify-content: space-between;
+  }
+
+  .description__images {
+    margin-top: -3px;
+    padding-left: 20px;
+    padding-right: 16px;
   }
 
   .description__image {
@@ -127,6 +178,29 @@
   .description__item {
     width: 250px;
     padding: 0 20px;
+  }
+
+  .description__list {
+    text-align: center;
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 25px;
+  }
+
+  .description__item {
+    padding: 0 20px;
+  }
+
+  .description__item h3 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+
+  .description__item p {
+    font-size: 18px;
+    padding: 12px 6px;
+    line-height: 30px;
   }
 
   .description__effect {
