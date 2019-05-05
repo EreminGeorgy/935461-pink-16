@@ -49,15 +49,24 @@
   background-color: @bg-lightgrey;
 }
 
+.gallery__list .gallery__item {
+  display:flex;
+}
+
 .gallery__post {
   margin: 0 auto;
   text-align: left;
   padding: 18px;
+  padding-bottom: 19px;
+}
+
+.gallery__post-text {
+  margin: 0;
 }
 
 .gallery__panorama-comment {
   margin: 0 20px;
-  max-width: 940px;
+  max-width: 890px;
   background-color: @bg-lightgrey;
 }
 
@@ -70,22 +79,21 @@
 .gallery__likes {
   color: #d22856;
   margin: 0;
-  margin-left: 40px;
+  margin-left: 32px;
+  margin-top: 10px;
   position: relative;
-  margin-top: auto;
 
   &::before {
     content: "";
 
     position: absolute;
-    top: 0;
-    left: -35px;
+    top: 5px;
+    left: -32px;
 
     width: 30px;
-    height: 30px;
+    height: 20px;
 
-    background-image: url("../img/icon-heart.svg");
-    background-repeat: no-repeat;
+    background: url("../img/icon-heart.svg") no-repeat;
     background-position: 0 0;
     z-index: 10;
   }
@@ -103,11 +111,7 @@
 .gallery__item {
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.gallery__item:last-child {
-  margin-bottom: 0;
+  margin-top: 20px;
 }
 
 @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
@@ -147,14 +151,52 @@
   .gallery__post {
     display: flex;
     flex-wrap: wrap;
+    padding: 23px;
+    padding-left: 28px;
+  }
+
+  li .gallery__post {
+    min-height: 109px;
+    flex-direction: column;
   }
 
   .gallery__panorama-comment .gallery__likes {
     order: -1;
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .gallery__panorama-comment {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   .gallery__panorama-comment div {
     order: -2;
+  }
+
+  .gallery__post time {
+    padding-top: 2px;
+  }
+
+  .gallery__likes {
+    margin-top: auto;
+    margin-right: 39px;
+    &::before {
+      left: 109px;
+    }
+  }
+
+  li .gallery__likes {
+    margin-left: 0;
+    &::before {
+      left: 227px;
+    }
+  }
+
+  .gallery__item {
+    margin: 0;
+    margin-top: 20px;
   }
 }
 
@@ -165,10 +207,17 @@
 
   .gallery__panorama-comment {
     margin: 0 auto;
+    margin-bottom: -4px;
+    padding-top: 25px;
+    padding-bottom: 23px;
   }
 
   .gallery__list {
     margin: 0 auto;
+  }
+
+  .gallery__item {
+    margin-top: 54px;
   }
 
   .gallery__title {

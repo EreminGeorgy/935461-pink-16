@@ -47,11 +47,11 @@
           <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a>Фотографии</a>
-          </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>Конкурс</a>
           </li>
           <li class="site-list__item">
             <a href="#">HTML Academy</a>
@@ -61,11 +61,11 @@
     </header>
 
     <main class="page-main">
-      <h1>конкурс</h1>
-      <h2>поделись</h2>
+      <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       <section class="form">
+        <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
         <form class="form__body" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__group">
+          <fieldset class="form__group form__name">
             <label for="surname">Фамилия:</label>
             <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
             <label for="name">Имя:</label>
@@ -73,31 +73,7 @@
             <label for="patronymic">Имя:</label>
             <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
           </fieldset>
-          <fieldset class="form__group">
-            <legend>С каким приложением путешествовали?</legend>
-            <ul class="form__radio-group">
-              <li class="form__option">
-                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="ios" id="filter-ios">
-                <label for="filter-ios">Pink для iOS</label>
-              </li>
-              <li class="form__option">
-                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="android" id="filter-android" checked>
-                <label for="filter-android">Pink на Android</label>
-              </li>
-              <li class="form__option">
-                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="windows" id="filter-windows">
-                <label for="filter-windows">Windows Phone</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form__group">
-            <legend>Контактная информация</legend>
-            <input type="tel" name="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста">
-            <label for="phone">Номер телефона</label>
-            <input type="email" name="email" id="email" placeholder="Введите почту *" required>
-            <label for="email">Адрес почты</label>
-          </fieldset>
-          <fieldset>
+          <fieldset class="form__group form__acivements">
             <legend>Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__checkbox-group">
               <li class="form__option">
@@ -126,7 +102,33 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__group">
+            <legend>Контактная информация</legend>
+            <input type="tel" name="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста">
+            <label for="phone">Номер телефона</label>
+            <input type="email" name="email" id="email" placeholder="Введите почту *" required>
+            <label for="email">Адрес почты</label>
+          </fieldset>
+
+          <fieldset class="form__group form__app">
+            <legend>С каким приложением путешествовали?</legend>
+            <ul class="form__radio-group">
+              <li class="form__option">
+                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="ios" id="filter-ios">
+                <label for="filter-ios">Pink для iOS</label>
+              </li>
+              <li class="form__option">
+                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="android" id="filter-android" checked>
+                <label for="filter-android">Pink на Android</label>
+              </li>
+              <li class="form__option">
+                <input class="visually-hidden form__radio form-input" type="radio" name="application" value="windows" id="filter-windows">
+                <label for="filter-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__group">
             <legend>Опишите свои эмоции</legend>
             <textarea name="comment" id="comment-field" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
@@ -159,5 +161,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

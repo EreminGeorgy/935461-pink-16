@@ -67,21 +67,34 @@
 }
 
 .description__image:last-child {
-  display: inline-block;
+  display: block;
+  height: 277px;
+  overflow: hidden;
 }
 
 .description__effect {
   background: url("../img/icon-timer.svg") top left no-repeat;
   background-size: 238px;
-  padding-left: 300px;
-  height: 350px;
+  padding-left: 329px;
+  padding-right: 30px;
+  min-height: 320px;
   display: none;
+  text-align: left;
 }
 
 .description__effect h3 {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  padding-top: 66px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.description__effect p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .description__effect a {
@@ -117,6 +130,7 @@
     padding-top: 70px;
     padding-left: 24px;
     padding-right: 10px;
+    margin-bottom: 0px;
   }
 
   .description__item p {
@@ -127,12 +141,38 @@
     order: -1;
   }
 
-  .description__image {
+  .description__image:last-child {
     width: 300px;
+    height: 480px;
   }
 
   .description__effect {
     display: block;
+    position: relative;
+    background-position: 20px 30px;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      top: 84px;
+      left: 39px;
+
+      font-weight: 700;
+      font-size: 96px;
+      color: #d22856;
+      margin: 0;
+      width: 175px;
+      height: 105px;
+      padding-top:70px;
+      text-align: center;
+
+      background-color: white;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+      z-index: 10;
+
+    }
   }
 }
 
@@ -161,13 +201,17 @@
 
   .description__images {
     margin-top: -3px;
-    padding-left: 20px;
+    padding-left: 25px;
     padding-right: 16px;
   }
 
   .description__image {
     display: block;
     margin: 0;
+  }
+
+  .description__image:last-child {
+    height: 300px;
   }
 
   .description__item {
@@ -195,6 +239,41 @@
   }
 
   .description__effect {
-    padding-right: 130px;
+    padding-left: 496px;
+    padding-top: 112px;
+    background-color: #f2f2f2;
+    background-size: 298px auto;
+    background-position: 130px 20px;
+
+    &::before {
+      top: 89px;
+      left: 153px;
+
+      font-size: 120px;
+      width: 223px;
+      height: 129px;
+      padding-top: 94px;
+
+      border: 15px solid #d22856;
+    }
+  }
+
+  .description__effect h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description__effect p {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    padding-right: 140px;
+    padding-bottom: 34px;
+  }
+
+  .description__effect a {
+    font-size: 18px;
   }
 }
