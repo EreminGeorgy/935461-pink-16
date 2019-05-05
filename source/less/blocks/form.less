@@ -50,12 +50,10 @@
 .form__group input {
   width: 280px;
   height: 64px;
-  padding: 0px;
+  padding: 0;
   padding-left: 14px;
   font-size: 18px;
 }
-
-.form__acivements {}
 
 .form__checkbox-group,
 .form__radio-group {
@@ -82,7 +80,7 @@
   border: 2px solid #000000;
 }
 
-.form__checkbox:checked+label::after {
+.form__checkbox:checked + label::after {
   content: "";
 
   position: absolute;
@@ -112,7 +110,7 @@
   border-radius: 50%;
 }
 
-.form__radio:checked+label::after {
+.form__radio:checked + label::after {
   content: "";
 
   position: absolute;
