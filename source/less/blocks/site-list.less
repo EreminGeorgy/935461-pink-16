@@ -15,8 +15,6 @@
   background-color: #283645;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000000;
-
-  margin-top: 70px;
 }
 
 .site-list__item--active {
@@ -37,13 +35,21 @@
   }
 }
 
+.site-list li:first-child {
+  margin-top: 70px;
+}
+
 @media (min-width: @tablet-width) {
-  .site-list a {
+  .site-list li:first-child {
     margin-top: 109px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .site-list li:first-child {
+    margin-top: 0;
+  }
+
   .main-nav__list.site-list {
     display: flex;
     flex-wrap: wrap;

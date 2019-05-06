@@ -2,24 +2,22 @@
   margin: 0;
   padding: 0;
   display: flex;
-
-  outline: 2px solid red;
 }
 
 .description__header {
-  padding-top: 45px;
-  padding-bottom: 36px;
+  padding-top: 40px;
   background-color: #ffffff;
-  margin: 0 -20px;
+  margin: 0 auto;
+  padding-bottom: 38px;
 }
 
 .description__list-wrapper {
-
   position: relative;
   padding: 0 20px;
   margin: 0 auto;
-  min-width: 320px;
+  min-width: 280px;
   background: @bg-lightgrey url("../img/bg-triangle-white.svg") top center no-repeat;
+  background-size: 100% auto;
 }
 
 .description__fishing {
@@ -27,45 +25,76 @@
   padding: 0;
   color: #283645;
   font-size: 24px;
+  line-height: 28px;
   font-weight: 300;
+}
+
+.description__fishing:last-child {
+  margin-top: 30px;
+}
+
+.description__br {
+  display: none;
 }
 
 .description__list {
   .list-reset;
-  padding-left: 42px;
+  padding-top: 78px;
+  margin-bottom: 40px;
 }
 
 .description__item h3 {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
 .description__item p {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 31px;
   font-size: 14px;
 }
 
-.description__image {
+.description__images {
   .list-reset();
+}
+
+.description__image {
   display: none;
 }
 
 .description__image:last-child {
   display: block;
+  height: 277px;
+  overflow: hidden;
 }
 
 .description__effect {
   background: url("../img/icon-timer.svg") top left no-repeat;
   background-size: 238px;
-  padding-left: 300px;
-  height: 350px;
+  padding-left: 329px;
+  padding-right: 30px;
+  min-height: 320px;
   display: none;
+  text-align: left;
 }
 
 .description__effect h3 {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  padding-top: 66px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.description__effect p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .description__effect a {
@@ -76,18 +105,73 @@
 @media (min-width: @tablet-width) {
   .description__list-wrapper {
     display: flex;
+    padding: 0 5px;
+    padding-top: 5px;
+  }
+
+  .description__fishing {
+    margin-top: 8px;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 300;
+  }
+
+  .description__fishing:last-child {
+    margin-top: 2px;
+    padding-bottom: 10px;
+  }
+
+  .description__br {
+    display: inline-block;
+  }
+
+  .description__list {
+    text-align: left;
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .description__item p {
+    margin-bottom: 34px;
   }
 
   .description__images {
     order: -1;
   }
 
-  .description__effect {
-    display: block;
+  .description__image:last-child {
+    width: 300px;
+    height: 480px;
   }
 
-  .description__image {
-    width: 300px;
+  .description__effect {
+    display: block;
+    position: relative;
+    background-position: 20px 30px;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      top: 84px;
+      left: 39px;
+
+      font-weight: 700;
+      font-size: 96px;
+      color: #d22856;
+      margin: 0;
+      width: 175px;
+      height: 105px;
+      padding-top: 70px;
+      text-align: center;
+
+      background-color: white;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+      z-index: 10;
+    }
   }
 }
 
@@ -97,22 +181,98 @@
     padding: 0 110px;
   }
 
+  .description__fishing {
+    margin-top: 28px;
+    font-size: 50px;
+    line-height: 59px;
+    font-weight: 300;
+  }
+
+  .description__fishing:last-child {
+    padding-bottom: 40px;
+  }
+
   .description__list,
   .description__images {
     display: flex;
     justify-content: space-between;
   }
 
+  .description__images {
+    margin-top: -3px;
+    padding-left: 25px;
+    padding-right: 16px;
+  }
+
   .description__image {
     display: block;
-    margin: 0 auto;
+    margin: 0;
+  }
+
+  .description__image:last-child {
+    height: 300px;
   }
 
   .description__item {
     width: 250px;
+    padding: 0 20px;
+  }
+
+  .description__list {
+    text-align: center;
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 25px;
+  }
+
+  .description__item h3 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+
+  .description__item p {
+    font-size: 18px;
+    padding: 12px 6px;
+    line-height: 30px;
   }
 
   .description__effect {
-    padding-right: 130px;
+    padding-left: 496px;
+    padding-top: 112px;
+    background-color: #f2f2f2;
+    background-size: 298px auto;
+    background-position: 130px 20px;
+
+    &::before {
+      top: 89px;
+      left: 153px;
+
+      font-size: 120px;
+      width: 223px;
+      height: 129px;
+      padding-top: 94px;
+
+      border: 15px solid #d22856;
+    }
+  }
+
+  .description__effect h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .description__effect p {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    padding-right: 140px;
+    padding-bottom: 34px;
+  }
+
+  .description__effect a {
+    font-size: 18px;
   }
 }

@@ -2,7 +2,6 @@
   background-color: #ffffff;
   color: #283645;
 
-  outline: 2px solid lightblue;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -13,18 +12,162 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  outline: 1px dashed red;
+  background-color: white;
+  outline: 1px solid black;
+}
+
+.page-footer__logo {
+  margin: 38px auto;
+  margin-bottom: 30px;
+}
+
+.page-footer__logo-image {
+  fill: black;
+  width: 150px;
+  height: auto;
+}
+
+.page-footer__logo-glasses {
+  fill: #d22856;
+  width: 200px;
+  height: auto;
+}
+
+.page-footer__logo .page-footer__logo-image:active {
+  opacity: 0.3;
+  fill: black;
+}
+
+.page-footer__logo-image:hover {
+  fill: #d22856;
+}
+
+.page-footer__logo-desktop {
+  display: none;
+}
+
+.social__list {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 180px;
+  max-width: 340px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.social__item {
+  margin: 0 6px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  font-size: 0;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+}
+
+.social__link:hover {
+  border: 3px solid black;
+}
+
+.page-footer__copyright {
+  margin: 46px auto;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link:hover svg {
+  fill: #000000;
+}
+
+.copyright__link:active svg {
+  fill: #bec2c7;
+}
+
+.copyright__link:active {
+  color: black;
+}
+
+.copyright__text {
+  display: inline-block;
+  padding-right: 8px;
+  padding-left: 5px;
+}
+
+.page-footer__htmlacademy {
+  fill: #d22856;
+  width: 40px;
+  height: auto;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
     min-width: 660px;
     flex-direction: row;
+    justify-content: space-between;
+    padding-top: 39px;
+  }
+
+  .page-footer__logo {
+    margin-left: 18px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .social__list {
+    margin-top: 6px;
+    padding-right: 15px;
+  }
+
+  .page-footer__copyright {
+    margin-left: 0;
+    margin-right: 16px;
+    margin-top: 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
     min-width: 1200px;
+    padding-top: 95px;
+  }
+
+  .page-footer__logo-glasses,
+  .page-footer__logo-text {
+    display: none;
+  }
+
+  .page-footer__logo-desktop {
+    display: block;
+  }
+
+  .page-footer__logo {
+    margin-left: 129px;
+  }
+
+  .social__list {
+    padding-right: 0;
+    padding-left: 18px;
+  }
+
+  .page-footer__copyright {
+    margin-left: 0;
+    margin-right: 123px;
+    margin-top: 22px;
+  }
+
+  .copyright__text {
+    font-size: 18px;
   }
 }
