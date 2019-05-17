@@ -1,18 +1,279 @@
 .publish {
   margin: 0;
-  margin-bottom: 932px;
+  padding: 0;
 }
 
-@media (min-width: @tablet-width) {
-  .publish {
-    margin: 0;
-    margin-bottom: 400px;
+.publish__header {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 500;
+  padding-top: 31px;
+  padding-bottom: 30px;
+}
+
+.publish__container {
+  padding-top: 20px;
+}
+
+.publish__photo-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.publish__container {
+  background-color: #f2f2f2;
+  padding-bottom: 27px;
+}
+
+.publish__icons {
+  .list-reset();
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 60px 32px 53px;
+}
+
+.publish__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish__icon--current {
+  fill: #d22856;
+}
+
+.publish__filters {
+  .list-reset();
+}
+
+.publish__range-controls .publish__bar {
+  width: 75%;
+  height: 2px;
+  background: #000000;
+  margin: 0 auto;
+}
+
+.publish__range-controls {
+  position: relative;
+  margin: 25px auto 37px auto;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #dddfe0;
+  display: none;
+
+  &--crop {
+    display: block;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .publish {
+.publish__toggle {
+  position: absolute;
+  top: -6px;
+  left: 72%;
+  width: 10px;
+  height: 10px;
+  background: #f2f2f2;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:active {
+    background: #d22856;
+  }
+}
+
+.publish__button {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 0;
+  width: 280px;
+  margin: 0 auto;
+
+  border-radius: 27px;
+  border: 3px solid #d22856;
+  background: transparent;
+  color: #d22856;
+  margin-bottom: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d22856;
+    color: white;
+  }
+
+  &:active {
+    color: #e06989;
+    background-color: #d22856;
+  }
+
+  &:disabled {
+    color: #dddfe0;
+    border: 3px solid #dddfe0;
+    pointer-events: none;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .publish__container {
+    padding-top: 55px;
+    padding-left: 20px;
+    padding-bottom: 21px;
+  }
+
+  .publish__header {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .publish__photo-image {
+    display: inline-block;
+  }
+
+  .publish__form {
+    display: inline-block;
+    width: 335px;
+    vertical-align: top;
+  }
+
+  .publish__form-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .publish__icons {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 0 0 42px;
+  }
+
+  .publish__icon {
+    height: 29px;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddfe0;
+    margin-bottom: 15px;
+  }
+
+  .publish__icon svg {
+    height: 25px;
+    width: 25px;
+    fill: #d22856;
+  }
+
+  .publish__range-controls {
+    display: block;
+    height: 29px;
+    width: 265px;
     margin: 0;
-    margin-bottom: 700px;
+    padding: 20px 0 7px 0;
+    margin-bottom: 15px;
+  }
+
+  .publish__range-controls .publish__bar {
+    width: 75%;
+    height: 2px;
+    background: #000000;
+    margin: 0 auto;
+  }
+
+  .publish__filters {
+    width: 350px;
+  }
+
+  .publish__toggle {
+    top: 14px;
+  }
+
+  .publish__range-controls--crop .publish__toggle {
+    left: 65%;
+  }
+
+  .publish__range-controls--fill .publish__toggle {
+    left: 20%;
+  }
+
+  .publish__range-controls--contrast .publish__toggle {
+    left: 47%;
+  }
+
+  .publish__button {
+    padding: 12px;
+    width: 260px;
+    margin-left: 8px;
+    margin-bottom: 27px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .publish__header {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  .publish__container {
+    padding-left: 0;
+    margin: 0 130px;
+  }
+
+  .publish__form {
+    width: 500px;
+    margin-left: 0;
+  }
+
+  .publish__icons {
+    margin: 0 0 0 83px;
+  }
+
+  .publish__icon svg {
+    height: 48px;
+    width: 48px;
+  }
+
+  .publish__range-controls {
+    width: 365px;
+  }
+
+  .publish__range-controls .publish__bar {
+    width: 78%;
+    margin-left: 50px;
+  }
+
+  .publish__range-controls--crop .publish__toggle {
+    left: 32%;
+  }
+
+  .publish__range-controls--fill .publish__toggle {
+    left: 81%;
+  }
+
+  .publish__range-controls--contrast .publish__toggle {
+    left: 57%;
+  }
+
+  .publish__photo-image {
+    padding-left: 25px;
+  }
+
+  .publish__buttons {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 130px;
+  }
+
+  .publish__button {
+    padding: 12px;
+    width: 200px;
+    margin-left: 45px;
+    margin-bottom: 27px;
+  }
+
+  .publish__container {
+    padding-bottom: 30px;
   }
 }

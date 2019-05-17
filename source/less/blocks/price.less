@@ -1,0 +1,279 @@
+.price {
+  padding: 87px 0 32px 0;
+  margin: 0 auto;
+  min-width: 280px;
+  background: @bg-lightgrey url("../img/bg-triangle-white.svg") top center no-repeat;
+  background-size: 100% 21%;
+  overflow: hidden;
+}
+
+.price__table {
+  width: 346%;
+  margin-left: -166%;
+  position: relative;
+  border-collapse: collapse;
+
+  &::before {
+    content: "розовый фильтр смайлики комментарии";
+
+    position: absolute;
+    font-size: 14px;
+
+    width: 150px;
+    height: 64px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 61px;
+    text-align: left;
+
+    top: 100px;
+    left: 52%;
+    z-index: 10;
+  }
+}
+
+.price__table td {
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  width: 280px;
+  height: 57px;
+}
+
+.price__table-head td {
+  background-color: #283645;
+  color: #ffffff;
+  border: 2px solid #f2f2f2;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  height: 95px;
+  border-bottom: none;
+
+  &:first-child {
+    background-color: transparent;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+.price__table-head b {
+  font-size: 18px;
+}
+
+.price__table-yes {
+  font-size: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 62px;
+    height: 64px;
+
+    top: -36px;
+    right: -137px;
+    background: url("../img/icon-yes-green.svg") center center no-repeat;
+    z-index: 10;
+  }
+}
+
+.price__table-no {
+  font-size: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 62px;
+    height: 64px;
+
+    top: -37px;
+    right: -137px;
+    background: url("../img/icon-no.svg") center center no-repeat;
+    z-index: 10;
+  }
+}
+
+.price__table-cell {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 43px;
+    height: 1px;
+    border: 30px solid #d22856;
+    border-right-width: 30px;
+    border-right-color: transparent;
+    border-left-width: 30px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-45deg);
+
+    top: -30px;
+    left: -128px;
+    z-index: 10;
+  }
+
+  &::before {
+    content: "хит";
+    font-size: 18px;
+    text-transform: lowercase;
+
+    position: absolute;
+
+    transform: rotate(-45deg);
+    top: -5px;
+    left: -83px;
+    z-index: 11;
+  }
+}
+
+.price__toggles {
+  margin-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    padding-bottom: 70px;
+  }
+
+  .price__table {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .price__table-head td {
+    height: 78px;
+    width: 105px;
+    font-size: 18px;
+  }
+
+  .price__table-body td {
+    text-align: left;
+    padding-left: 16px;
+    height: 42px;
+    width: 105px;
+  }
+
+  .price__table-head b {
+    font-size: 16px;
+  }
+
+  .price__table-yes::after {
+    top: -36px;
+    right: -93px;
+  }
+
+  .price__table-no::after {
+    top: -36px;
+    right: -93px;
+  }
+
+  .price__toggles {
+    display: none;
+  }
+
+  .price__table::before {
+    content: "";
+  }
+
+  .price__table-cell {
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 30px;
+      height: 0px;
+      border: 26px solid #d22856;
+      border-right-width: 26px;
+      border-right-color: transparent;
+      border-left-width: 26px;
+      border-left-color: transparent;
+      border-top-color: transparent;
+
+      top: -25px;
+      left: -64px;
+    }
+
+    &::before {
+      top: -10px;
+      left: -30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    padding-top: 148px;
+    padding-bottom: 97px;
+  }
+
+  .price__table {
+    width: 942px;
+  }
+
+  .price__table-head td {
+    height: 95px;
+    width: 105px;
+    font-size: 24px;
+    padding-top: 0;
+  }
+
+  .price__table-body td {
+    text-align: left;
+    padding-left: 22px;
+    height: 56px;
+    width: 125px;
+    font-size: 18px;
+  }
+
+  .price__table-head b {
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 0px;
+  }
+
+  .price__table-yes::after {
+    top: -33px;
+    right: -127px;
+  }
+
+  .price__table-no::after {
+    top: -34px;
+    right: -125px;
+  }
+
+  .price__table-cell {
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 43px;
+      height: 0px;
+      border: 28px solid #d22856;
+      border-right-width: 28px;
+      border-right-color: transparent;
+      border-left-width: 28px;
+      border-left-color: transparent;
+      border-top-color: transparent;
+
+      top: -27px;
+      left: -103px;
+    }
+
+    &::before {
+      top: -5px;
+      left: -60px;
+    }
+  }
+}

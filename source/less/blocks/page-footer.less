@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  outline: 1px solid black;
 }
 
 .page-footer__logo {
@@ -111,7 +110,15 @@
   height: auto;
 }
 
+.page-footer__index {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .page-footer__index {
+    display: block;
+  }
+
   .page-footer__wrapper {
     min-width: 660px;
     flex-direction: row;
