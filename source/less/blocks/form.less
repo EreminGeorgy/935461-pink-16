@@ -136,8 +136,7 @@
 }
 
 .form__checkbox:focus + label::before {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 2px auto lightblue;
 }
 
 .form__checkbox + label:active::before {
@@ -256,6 +255,7 @@
   .form__body {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 27px;
   }
 
   .form__group {
@@ -299,7 +299,7 @@
   }
 
   .form__container-name:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .form__legend-toggle {
@@ -372,7 +372,7 @@
       width: 62px;
       height: 64px;
 
-      top: 0px;
+      top: 0;
       left: 496px;
       background-image: url("../img/icon-phone.svg");
       background-repeat: no-repeat;
@@ -389,7 +389,7 @@
       width: 62px;
       height: 64px;
 
-      top: 0px;
+      top: 0;
       left: 496px;
       background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
@@ -397,10 +397,6 @@
       background-color: #e5e5e5;
       z-index: 10;
     }
-  }
-
-  .form__container-name:last-child {
-    margin-bottom: 0;
   }
 
   .form__achievements {
@@ -429,7 +425,7 @@
   .form__group-textarea {
     border: 2px groove #f2f2f2;
     margin-bottom: 52px;
-    min-width: 80%
+    min-width: 80%;
   }
 
   .form__legend-textarea {
@@ -449,10 +445,6 @@
 
   .form__comment {
     margin: 36px 0 0 128px;
-  }
-
-  .form__body {
-    margin-bottom: 27px;
   }
 }
 
@@ -527,7 +519,7 @@
 
     &--mail::after {
       top: 32px;
-      left: 370px
+      left: 370px;
     }
   }
 
