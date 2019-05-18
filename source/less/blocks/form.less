@@ -107,7 +107,10 @@
 
   &:active {
     border: 2px solid #d22856;
-    outline: 2px solid #d22856;
+  }
+
+  &:focus {
+    border: 2px solid #d22856;
   }
 }
 
@@ -349,7 +352,7 @@
   .form__tel-input,
   .form__mail-input {
     width: 430px;
-    margin: 0 118px 0 58px;
+    margin: 0 120px 0 58px;
     order: -1;
   }
 
@@ -507,10 +510,13 @@
   .form__contacts-wrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 936px;
+    margin: 0 auto;
   }
 
   .form__container-contacts {
     width: 468px;
+    margin: 0 -21px 16px 0;
 
     &--phone::after {
       top: 32px;
@@ -525,16 +531,13 @@
 
   .form__mail-input,
   .form__tel-input {
-    margin: 32px 98px 0 58px;
-    width: 313px;
+    margin: 32px 0 0 58px;
+    width: 312px;
+    flex-grow: 0px;
   }
 
   .form__contact-label {
     margin: 10px auto 0 78px;
-  }
-
-  .form__mail-input {
-    margin-left: 36px;
   }
 
   .form__checkbox-group {

@@ -27,7 +27,7 @@
 
     position: absolute;
     top: -122px;
-    left: 160px;
+    right: 160px;
 
     text-transform: uppercase;
     font-weight: 700;
@@ -123,6 +123,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   .gallery__br {
     display: none;
   }
@@ -133,7 +138,7 @@
   }
 
   .gallery__list {
-    margin: 0 20px;
+    margin: 0 auto;
   }
 
   .gallery__title {
@@ -145,7 +150,7 @@
 
   .gallery__panorama picture::before {
     top: -437px;
-    left: 500px;
+    right: 0px;
   }
 
   .gallery__post {
@@ -166,9 +171,14 @@
     margin-left: auto;
   }
 
+  .gallery__photo-image--panorama {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+
   .gallery__panorama-comment {
-    padding-bottom: 24px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
   }
 
   .gallery__panorama-comment div {
@@ -203,6 +213,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .gallery {
+    margin: 0;
+    padding: 0;
+  }
+
   .br {
     display: none;
   }
@@ -230,7 +245,7 @@
   }
 
   .gallery__panorama picture::before {
-    top: -435px;
-    left: 930px;
+    top: -436px;
+    right: 130px;
   }
 }
