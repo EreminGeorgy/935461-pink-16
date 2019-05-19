@@ -6,6 +6,11 @@
 .reviews__item {
   margin: 0;
   padding: 0;
+  display: none;
+
+  &--current {
+    display: block;
+  }
 }
 
 .reviews__author-name {
@@ -60,8 +65,10 @@
   }
 
   .reviews__item {
-    display: flex;
-    flex-direction: column;
+    &--current {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .reviews__job {
