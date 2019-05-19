@@ -46,6 +46,17 @@
 
 .contacts__map {
   width: 100%;
+  background: url("../img/bg-map-mobile@1x.jpg") top center no-repeat;
+  color: #ffffff;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/bg-map-mobile@2x.jpg") top center no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.contacts__map iframe {
+  width: 100%;
 }
 
 
@@ -79,7 +90,7 @@
     }
   }
 
-  .contacts__list-adress {
+  .contacts__list-address {
     width: 220px;
     padding-right: 15px;
   }
@@ -90,8 +101,21 @@
 
   .contacts__map {
     height: 375px;
+    background: url("../img/bg-map-tablet@1x.jpg") top center no-repeat;
+    color: #ffffff;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/bg-map-tablet@2x.jpg") top center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  .contacts__map iframe {
+    height: 375px;
   }
 }
+
+
 
 @media (min-width: @desktop-width) {
   .contacts__header {
@@ -114,7 +138,7 @@
     order: -2;
   }
 
-  .contacts__list .contacts__list-adress {
+  .contacts__list .contacts__list-address {
     width: 220px;
     padding-left: 18px;
     order: -1;
@@ -133,6 +157,17 @@
   }
 
   .contacts__map {
+    height: 500px;
+    background: url("../img/bg-map-desktop@1x.jpg") top center no-repeat;
+    color: #ffffff;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/bg-map-desktop@2x.jpg") top center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  .contacts__map iframe {
     height: 500px;
   }
 }

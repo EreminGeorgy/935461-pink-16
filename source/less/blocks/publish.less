@@ -33,6 +33,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: #b5b9be;
+
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: #d22856;
+  }
 }
 
 .publish__icon--current {
@@ -102,13 +111,25 @@
     color: #e06989;
     background-color: #d22856;
   }
+}
 
-  &:disabled {
-    color: #dddfe0;
-    border: 3px solid #dddfe0;
-    pointer-events: none;
+.publish__cancel-button {
+  color: #dddfe0;
+  border: 3px solid #dddfe0;
+
+  &:hover {
+    color: #b5b9be;
+    border: 3px solid #b5b9be;
+    background-color: #f2f2f2;
+  }
+
+  &:active {
+    color: #cbced2;
+    background-color: #b5b9be;
   }
 }
+
+
 
 
 @media (min-width: @tablet-width) {
@@ -266,7 +287,7 @@
 
   .publish__container {
     padding-left: 0;
-    margin: 0 130px 39px 130px;
+    margin: 0 auto 39px auto;
     padding-bottom: 30px;
   }
 }
